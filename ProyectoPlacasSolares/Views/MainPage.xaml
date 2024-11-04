@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoPlacasSolares.Views.MainPage">
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="#d6decf" Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Grid.Column="0" BackgroundColor="#e8f7d6" Padding="30" Margin="0,20,20,20"
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
+                   CornerRadius="20" HasShadow="False">
+                <Frame.Shadow>
+                    <Shadow Brush="Black" Opacity="0.5" Offset="0,5" Radius="5"/>
+                </Frame.Shadow>
+
+                <StackLayout>
+                    <Label Text="INICIO DE SESION"
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           TextColor="#626f43"
+                           HorizontalOptions="Center"
+                           Margin="0,0,0,20"/>
+
+                    <Label Text="Usuario:" FontAttributes="Bold" TextColor="#626f43" FontSize="18"/>
+                    <Entry Placeholder="Usuario" BackgroundColor="#faf6e6" TextColor="Black" Margin="0,5,0,15" FontSize="18"/>
+
+                    <Label Text="Contraseña:" FontAttributes="Bold" TextColor="#626f43" FontSize="18"/>
+                    <Entry IsPassword="True" Placeholder="Contraseña" TextColor="Black" BackgroundColor="#faf6e6" Margin="0,5,0,15" FontSize="18"/>
+
+                    <Label Text="He olvidado la contraseña" FontSize="Small" TextColor="Gray" HorizontalOptions="End"/>
+
+                    <Button Text="LOG IN" BackgroundColor="#c6e6b8" TextColor="Black" CornerRadius="10" Margin="0,10,0,0" FontSize="18"/>
+
+                    <Button Text="Inicia Sesion con Google" BackgroundColor="#e0e0e0" TextColor="Black" Margin="0,10,0,0" FontSize="18">
+                        <Button.ImageSource>
+                            <FontImageSource Glyph="&#xf1a0;" />
+                        </Button.ImageSource>
+                    </Button>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Column="1" BackgroundColor="#e8f7d6" Padding="20" VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" CornerRadius="20" HasShadow="True">
+                <Frame.Shadow>
+                    <Shadow Brush="Black" Opacity="0.5" Offset="5,5" Radius="10"/>
+                </Frame.Shadow>
+
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="NOMBRE COMPAÑÍA" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
