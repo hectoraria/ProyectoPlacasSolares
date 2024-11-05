@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoPlacasSolares.Views.MainPage">
 
-    <ContentPage.Content>
+    
         <Grid BackgroundColor="#d6decf" Padding="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
@@ -12,9 +12,9 @@
 
             <Frame Grid.Column="0" BackgroundColor="#e8f7d6" Padding="30" Margin="0,20,20,20"
                    VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
-                   CornerRadius="20" HasShadow="False">
+                   CornerRadius="20" HasShadow="True">
                 <Frame.Shadow>
-                    <Shadow Brush="Black" Opacity="0.5" Offset="0,5" Radius="5"/>
+                    <Shadow Brush="Black" Opacity="0.5" Offset="5,5" Radius="10"/>
                 </Frame.Shadow>
 
                 <StackLayout>
@@ -33,12 +33,10 @@
 
                     <Label Text="He olvidado la contraseña" FontSize="Small" TextColor="Gray" HorizontalOptions="End"/>
 
-                    <Button Text="LOG IN" BackgroundColor="#c6e6b8" TextColor="Black" CornerRadius="10" Margin="0,10,0,0" FontSize="18"/>
+                <Button Text="LOGIN" BackgroundColor="#c6e6b8" TextColor="Black" CornerRadius="10" Margin="0,10,0,0" FontSize="18" Clicked="onClick"/>
 
-                    <Button Text="Inicia Sesion con Google" BackgroundColor="#e0e0e0" TextColor="Black" Margin="0,10,0,0" FontSize="18">
-                        <Button.ImageSource>
-                            <FontImageSource Glyph="&#xf1a0;" />
-                        </Button.ImageSource>
+                <Button Text="Inicia Sesion con Google" BackgroundColor="#e0e0e0" TextColor="Black" Margin="0,10,0,0" FontSize="18" Clicked="onClick">
+                        
                     </Button>
                 </StackLayout>
             </Frame>
@@ -54,5 +52,5 @@
                 </StackLayout>
             </Frame>
         </Grid>
-    </ContentPage.Content>
+    
 </ContentPage>

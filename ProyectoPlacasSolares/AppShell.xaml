@@ -5,4 +5,5 @@
 
     
     <ShellContent Title="Login" ContentTemplate="{DataTemplate views:MainPage}" />
+    
 </Shell>

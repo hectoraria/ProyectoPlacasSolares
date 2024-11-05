@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoPlacasSolares.Views.PaginaCita"
+             Title="PaginaCita">
+    
+    <Grid BackgroundColor="#c4d1bb" Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        
+        <Grid Grid.Row="0" ColumnSpacing="10">
+            <Image Source="dotnet_bot.png" HeightRequest="60" WidthRequest="60" 
+                   VerticalOptions="Center" HorizontalOptions="Start"
+                   Aspect="AspectFill" Margin="10"
+                   BackgroundColor="#ece4c7" />
+            <Label Text="Raul Romero Calzada" FontSize="18" VerticalOptions="Center" 
+                   HorizontalOptions="Start" Margin="80,0,0,0" TextColor="Black"
+                   FontAttributes="Bold"/>
+        </Grid>
+
+        
+        <Frame Grid.Row="1" BackgroundColor="#a6b29b" CornerRadius="10" Padding="10" Margin="0,20,0,20">
+            <VerticalStackLayout>
+                <Label Text="Observación:" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                <Editor Placeholder="Escribe tus observaciones aquí..." 
+                        BackgroundColor="#d6decf" FontSize="14" TextColor="Black"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        
+        <Grid Grid.Row="2" ColumnSpacing="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Google Maps" BackgroundColor="#c6e6b8" TextColor="Black"
+                    FontAttributes="Bold" CornerRadius="10" Grid.Column="0" Clicked="onClickMaps"/>
+            <Button Text="Cámara" BackgroundColor="#a9b0a1" TextColor="Black"
+                    FontAttributes="Bold" CornerRadius="10" Grid.Column="1" Clicked="onClickFotos"/>
+        </Grid>
+    </Grid>
+</ContentPage>
